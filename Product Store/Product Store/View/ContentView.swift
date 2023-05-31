@@ -15,31 +15,28 @@ struct ContentView: View {
         sortDescriptors: [NSSortDescriptor(keyPath: \Item.timestamp, ascending: true)],
         animation: .default)
     private var items: FetchedResults<Item>
-
+    var products : [ Product] = [
+        Product(id: 1, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  used") ,
+        Product(id: 2, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  used"),
+        Product(id: 3, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  used"),
+        Product(id: 4, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  use very comfortable"),
+        Product(id: 5, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  used"),
+        Product(id: 6, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  used"),
+        Product(id: 7, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  used")
+    ]
+    var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
+    
     var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    NavigationLink {
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                    } label: {
-                        Text(item.timestamp!, formatter: itemFormatter)
-                    }
-                }
-                .onDelete(perform: deleteItems)
-            }
-            .toolbar {
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                ToolbarItem {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+        ScrollView{
+            LazyVGrid(columns: gridItemLayout, spacing: 6) {
+                ForEach(products) { product in
+                    ProductCard(product: product)
+                        .padding([.leading, .trailing, .top, .bottom], 16)
+                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 180)
                 }
             }
-            Text("Select an item")
         }
+
     }
 
     private func addItem() {
