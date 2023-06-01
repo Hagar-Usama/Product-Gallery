@@ -14,9 +14,8 @@ struct ProductList: View {
     
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
-        
         ScrollView{
-
+            
             LazyVGrid(columns: gridItemLayout, spacing: 0) {
                 ForEach(viewModel.products) { product in
                     ProductCard(product: product)

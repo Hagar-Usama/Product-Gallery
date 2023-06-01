@@ -12,6 +12,8 @@
 		AE0586602A28066500AFEA72 /* ProductListModelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05865F2A28066500AFEA72 /* ProductListModelView.swift */; };
 		AE0586622A280BD800AFEA72 /* ProductContainerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0586612A280BD800AFEA72 /* ProductContainerModel.swift */; };
 		AE0586652A280D1100AFEA72 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0586642A280D1100AFEA72 /* Service.swift */; };
+		AE0586692A28336200AFEA72 /* KingFisherImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE0586682A28336200AFEA72 /* KingFisherImageView.swift */; };
+		AE05866B2A284F9800AFEA72 /* Image+Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE05866A2A284F9800AFEA72 /* Image+Data.swift */; };
 		AEA9529A2A27AF2600240852 /* Product_StoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA952992A27AF2600240852 /* Product_StoreApp.swift */; };
 		AEA9529C2A27AF2600240852 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA9529B2A27AF2600240852 /* ContentView.swift */; };
 		AEA9529E2A27AF2800240852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA9529D2A27AF2800240852 /* Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		AE0586612A280BD800AFEA72 /* ProductContainerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductContainerModel.swift; sourceTree = "<group>"; };
 		AE0586642A280D1100AFEA72 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
 		AE0586662A28194800AFEA72 /* Product-Store-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Product-Store-Info.plist"; sourceTree = SOURCE_ROOT; };
+		AE0586682A28336200AFEA72 /* KingFisherImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KingFisherImageView.swift; sourceTree = "<group>"; };
+		AE05866A2A284F9800AFEA72 /* Image+Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Image+Data.swift"; sourceTree = "<group>"; };
 		AEA952962A27AF2600240852 /* Product Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Product Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA952992A27AF2600240852 /* Product_StoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product_StoreApp.swift; sourceTree = "<group>"; };
 		AEA9529B2A27AF2600240852 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +85,14 @@
 			path = Networking;
 			sourceTree = "<group>";
 		};
+		AE0586672A2832E800AFEA72 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AE05866A2A284F9800AFEA72 /* Image+Data.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		AEA9528D2A27AF2600240852 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				AE0586662A28194800AFEA72 /* Product-Store-Info.plist */,
+				AE0586672A2832E800AFEA72 /* Extensions */,
 				AE0586632A280CE400AFEA72 /* Networking */,
 				AEA952AE2A27AF8700240852 /* Model */,
 				AEA952AD2A27AF7D00240852 /* ViewModel */,
@@ -156,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				AEA952B42A27C33000240852 /* ThemeColor.swift */,
+				AE0586682A28336200AFEA72 /* KingFisherImageView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -279,9 +293,11 @@
 				AEA952A32A27AF2800240852 /* Persistence.swift in Sources */,
 				AE05865E2A2802FD00AFEA72 /* ProductList.swift in Sources */,
 				AEA9529C2A27AF2600240852 /* ContentView.swift in Sources */,
+				AE05866B2A284F9800AFEA72 /* Image+Data.swift in Sources */,
 				AEA9529A2A27AF2600240852 /* Product_StoreApp.swift in Sources */,
 				AEA952B02A27B20A00240852 /* ProductCard.swift in Sources */,
 				AEA952A62A27AF2800240852 /* Product_Store.xcdatamodeld in Sources */,
+				AE0586692A28336200AFEA72 /* KingFisherImageView.swift in Sources */,
 				AE0586652A280D1100AFEA72 /* Service.swift in Sources */,
 				AEA952B52A27C33000240852 /* ThemeColor.swift in Sources */,
 				AEA952B72A27EDED00240852 /* Product.swift in Sources */,

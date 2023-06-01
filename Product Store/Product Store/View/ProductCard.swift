@@ -14,12 +14,11 @@ struct ProductCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             
-            // TODO: fix this
-            Image("headphone")
+            KingFisherImageView(url: product.imageURL)
                 .resizable()
                 .scaledToFill()
 //                .frame(width:  UIScreen.main.bounds.width/2.25)
-                .frame(minWidth: 0, maxWidth: .infinity)
+                .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
                 .clipped()
             
             // Stack bottom half of card
