@@ -58,10 +58,7 @@ struct ProductCard: View {
         .shadow(color: Color.black.opacity(0.2), radius: 7, x: 0, y: 2)
 //        .frame(width:  UIScreen.main.bounds.width/2.25)
         .frame(minWidth: 0, maxWidth: .infinity, minHeight: 180)
-        .onTapGesture {
-            // TODO: Implement me
-            print("Card Tapped")
-        }
+    
     } //body
 }
 

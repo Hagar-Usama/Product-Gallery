@@ -22,7 +22,6 @@ struct DataService {
                     // TODO: handle errors
                     completion(nil, response.error)
                     return}
-                print(products[0].product.description)
                 
                 var productsList : [Product] = []
                 

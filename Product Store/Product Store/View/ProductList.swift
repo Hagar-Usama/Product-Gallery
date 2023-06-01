@@ -18,10 +18,16 @@ struct ProductList: View {
             
             LazyVGrid(columns: gridItemLayout, spacing: 0) {
                 ForEach(viewModel.products) { product in
-                    ProductCard(product: product)
-                        .padding([.leading, .trailing], 2)
-                        .padding([.top, .bottom], 6)
-                        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 180)
+                    
+                    NavigationLink {
+                        ProductDetail(productImageUrl: product.imageURL , productName: product.name)
+                    } label: {
+                        ProductCard(product: product)
+                            .padding([.leading, .trailing], 2)
+                            .padding([.top, .bottom], 6)
+                            .frame(minWidth: 0, maxWidth: .infinity, minHeight: 180)
+                    }
+                    
                 }
             }.padding([.leading, .trailing], 8)
         }
