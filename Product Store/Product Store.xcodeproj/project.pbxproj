@@ -95,6 +95,16 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		AE0586722A286E3500AFEA72 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE05865D2A2802FD00AFEA72 /* ProductList.swift */,
+				AEA952AF2A27B20A00240852 /* ProductCard.swift */,
+				AE05866E2A28572600AFEA72 /* ProductDetail.swift */,
+			);
+			path = Products;
+			sourceTree = "<group>";
+		};
 		AEA9528D2A27AF2600240852 = {
 			isa = PBXGroup;
 			children = (
@@ -141,12 +151,10 @@
 		AEA952AC2A27AF5B00240852 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				AE0586722A286E3500AFEA72 /* Products */,
 				AEA952B32A27C31700240852 /* Helpers */,
 				AEA952992A27AF2600240852 /* Product_StoreApp.swift */,
 				AEA9529B2A27AF2600240852 /* ContentView.swift */,
-				AE05865D2A2802FD00AFEA72 /* ProductList.swift */,
-				AEA952AF2A27B20A00240852 /* ProductCard.swift */,
-				AE05866E2A28572600AFEA72 /* ProductDetail.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";

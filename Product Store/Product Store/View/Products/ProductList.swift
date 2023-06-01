@@ -18,7 +18,6 @@ struct ProductList: View {
             
             LazyVGrid(columns: gridItemLayout, spacing: 0) {
                 ForEach(viewModel.products) { product in
-                    
                     NavigationLink {
                         ProductDetail(productImageUrl: product.imageURL , productName: product.name)
                     } label: {
