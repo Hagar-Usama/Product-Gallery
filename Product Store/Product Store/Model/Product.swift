@@ -4,14 +4,15 @@
 //
 //  Created by Hagar Usama on 01/06/2023.
 //
+//
 
-import Foundation
-struct Product: Decodable, Identifiable {
-    var id: Int
-    var title: String
-    var imageName: String
-    var price: String
-    var description: String
-    var image_url: String?
-    
+
+struct Product: Codable, Identifiable {
+    let id, name, description, price: String
+    let imageURL: String
+
+    enum CodingKeys: String, CodingKey {
+        case id, name, description, price
+        case imageURL = "image_url"
+    }
 }

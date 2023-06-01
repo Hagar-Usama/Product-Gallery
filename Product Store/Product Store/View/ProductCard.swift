@@ -14,7 +14,8 @@ struct ProductCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             
-            Image(product.imageName)
+            // TODO: fix this
+            Image("headphone")
                 .resizable()
                 .scaledToFill()
 //                .frame(width:  UIScreen.main.bounds.width/2.25)
@@ -24,11 +25,12 @@ struct ProductCard: View {
             // Stack bottom half of card
             VStack(alignment: .leading, spacing: 6) {
                 HStack(alignment: .top, spacing: 4) {
-                    Text(product.title)
+                    Text(product.name)
                         .fontWeight(Font.Weight.heavy)
                         .foregroundColor(ThemeColor.primary)
-                        .font(.system(size: 13))
-                        .textCase(.uppercase)
+                        .font(.system(size: 12))
+                        .lineLimit(2)
+//                        .textCase(.uppercase)
                     Spacer()
                     // TODO: convert price to double in the right place
                     Text("$" + product.price)
@@ -37,6 +39,7 @@ struct ProductCard: View {
                         .font(.system(size: 12))
                         .frame(width: 50)
                         .textCase(.uppercase)
+//                        .lineLimit(2)
                     
                     
 //Text(String.init(format: "$%.2f", arguments: [Double(product.price)]))
@@ -44,7 +47,7 @@ struct ProductCard: View {
                 }
                 
                 Text(product.description)
-                    .font(Font.custom("HelveticaNeue-Bold", size: 12))
+                    .font(Font.custom("HelveticaNeue-Bold", size: 11))
                     .foregroundColor(Color.gray)
                     .lineLimit(2)
             }
@@ -65,7 +68,7 @@ struct ProductCard: View {
 
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
-        let product = Product(id: 1, title: "Perfect Headphone for everyday  used", imageName: "headphone", price: "15.00", description: "Perfect Headphone for everyday  used")
+    let product = Product(id: "1", name: "Perfect Headphone for everyday  used", description: "Perfect Headphone for everyday  used", price: "15.00", imageURL: "")
         ProductCard(product: product)
     }
 }
