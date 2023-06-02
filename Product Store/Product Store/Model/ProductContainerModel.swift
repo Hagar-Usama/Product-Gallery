@@ -7,7 +7,7 @@
 
 import Foundation
 struct ProductContainer: Codable {
-    let product: Product
+    let product: ProductRemote
 
     enum CodingKeys: String, CodingKey {
         case product = "Product"

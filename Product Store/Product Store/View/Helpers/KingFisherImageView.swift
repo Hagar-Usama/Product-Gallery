@@ -9,6 +9,7 @@ import SwiftUI
 
 // TODO: move to Utility or helper
 import struct Kingfisher.KFImage
+import Kingfisher
 struct InternetAvailability{
     static let isOnline = false
 }
@@ -17,10 +18,12 @@ struct InternetAvailability{
 func KingFisherImageView(url:String)-> KFImage{
    
     KFImage(
-        URL(string: url),
-        options: [
-            .transition(.fade(0.35))
-        ]
+        URL(string: url)
+//        ,
+//        options: [
+//            KingfisherOptionsInfoItem
+//            .forceRefresh
+//        ]
     ).onSuccess { result in
         print("sucess")
     }.onFailure { error in
@@ -28,7 +31,7 @@ func KingFisherImageView(url:String)-> KFImage{
     }
     .placeholder{
         InternetAvailability.isOnline ?
-        Image("not_found").frame(width: 50, height: 50) : Image("thumbnail").frame(width: 50, height: 50)
+        Image("not_found").frame(width: 50, height: 50) : Image("image_placeholder").frame(width: 50, height: 50)
     }
 }
 

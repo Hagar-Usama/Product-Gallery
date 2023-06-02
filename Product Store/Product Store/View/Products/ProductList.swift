@@ -14,12 +14,12 @@ struct ProductList: View {
     
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
+        
         ScrollView{
-            
             LazyVGrid(columns: gridItemLayout, spacing: 0) {
                 ForEach(viewModel.products) { product in
                     NavigationLink {
-                        ProductDetail(productImageUrl: product.imageURL , productName: product.name)
+                        ProductDetail(product: product)
                     } label: {
                         ProductCard(product: product)
                             .padding([.leading, .trailing], 2)
@@ -29,6 +29,12 @@ struct ProductList: View {
                     
                 }
             }.padding([.leading, .trailing], 8)
+             .refreshable {
+                    print("Refresh")
+                 viewModel.loadData { _ in
+                     
+                 }
+                }
         }
         .navigationTitle("Products")
         .foregroundColor(ThemeColor.primary)
