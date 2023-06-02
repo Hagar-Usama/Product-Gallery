@@ -163,7 +163,6 @@
 				AEA952AD2A27AF7D00240852 /* ViewModel */,
 				AEA952AC2A27AF5B00240852 /* View */,
 				AEA9529D2A27AF2800240852 /* Assets.xcassets */,
-				AEA952A22A27AF2800240852 /* Persistence.swift */,
 				AEA9529F2A27AF2800240852 /* Preview Content */,
 			);
 			path = "Product Store";
@@ -199,6 +198,7 @@
 		AEA952AE2A27AF8700240852 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				AEA952A22A27AF2800240852 /* Persistence.swift */,
 				AEA952A42A27AF2800240852 /* Product_Store.xcdatamodeld */,
 				AEA952B62A27EDED00240852 /* ProductRemote.swift */,
 				AE0586612A280BD800AFEA72 /* ProductContainerModel.swift */,
