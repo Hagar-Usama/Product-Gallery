@@ -20,7 +20,10 @@ class ProductListViewModel: ObservableObject {
         
         dataManager.getProducts { products in
             self.products = products
-//            completion(products)
         }
+    }
+    
+    func clearDataBase(){
+        dataManager.clearDataBase()
     }
 }

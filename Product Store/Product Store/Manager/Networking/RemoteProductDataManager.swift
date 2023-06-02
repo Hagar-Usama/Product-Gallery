@@ -1,36 +1,34 @@
 //
-//  Service.swift
+//  RemoteProductDataManager.swift
 //  Product Store
 //
-//  Created by Hagar Usama on 01/06/2023.
+//  Created by Hagar Usama on 02/06/2023.
 //
 
 import Foundation
 import Alamofire
 
-struct DataService {
-    
-    static let shared = DataService()
+class RemoteProductDataManager{
     private var ProductsUrl = "http://www.nweave.com/wp-content/uploads/2012/09/featured.txt"
-    
+
     // MARK: - Services
-    func requestFetchProducts(completion: @escaping ([ProductRemote]?, Error?) -> ()) {
+//    func getProducts(completion: @escaping ([Product]?, Error?) -> ())
+    func getAllProducts(completion: @escaping ([Product]) -> ()) {
         AF.request(ProductsUrl)
             .validate()
             .responseDecodable(of: [ProductContainer].self) { response in
                 guard let products = response.value else {
                     // TODO: handle errors
-                    completion(nil, response.error)
+                    completion([Product]())
                     return}
                 
-                var productsList : [ProductRemote] = []
-                
+                var productsList : [Product] = []
                 for product in products{
-                    productsList.append(product.product)
+                    productsList.append(product.product.toProduct())
                 }
                 
-                completion(productsList, nil)
+                completion(productsList)
             }
     }
-    
 }
+
