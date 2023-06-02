@@ -14,7 +14,7 @@ struct ProductCard: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
             
-            KingFisherImageView(url: product.imageURL)
+            KingFisherImageView(url: product.imageURL ?? "")
                 .resizable()
                 .scaledToFill()
 //                .frame(width:  UIScreen.main.bounds.width/2.25)
@@ -24,7 +24,7 @@ struct ProductCard: View {
             // Stack bottom half of card
             VStack(alignment: .leading, spacing: 6) {
                 HStack(alignment: .top, spacing: 4) {
-                    Text(product.name)
+                    Text(product.name ?? "")
                         .fontWeight(Font.Weight.heavy)
                         .foregroundColor(ThemeColor.primary)
                         .font(.system(size: 12))
@@ -32,7 +32,7 @@ struct ProductCard: View {
 //                        .textCase(.uppercase)
                     Spacer()
                     // TODO: convert price to double in the right place
-                    Text("$" + product.price)
+                    Text("$" + String(product.price ?? 0))
                         .fontWeight(Font.Weight.heavy)
                         .foregroundColor(ThemeColor.secondary1)
                         .font(.system(size: 12))
@@ -45,7 +45,7 @@ struct ProductCard: View {
 
                 }
                 
-                Text(product.description)
+                Text(product.description ?? "")
                     .font(Font.custom("HelveticaNeue-Bold", size: 11))
                     .foregroundColor(Color.gray)
                     .lineLimit(2)
@@ -64,7 +64,7 @@ struct ProductCard: View {
 
 struct ProductCard_Previews: PreviewProvider {
     static var previews: some View {
-    let product = Product(id: "1", name: "Perfect Headphone for everyday  used", description: "Perfect Headphone for everyday  used", price: "15.00", imageURL: "")
+        let product = Product(id: 1, name: "Perfect Headphone for everyday  used", description: "Perfect Headphone for everyday  used", price: 15.00, imageURL: "", imageData: nil)
         ProductCard(product: product)
     }
 }

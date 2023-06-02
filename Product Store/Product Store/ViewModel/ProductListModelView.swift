@@ -7,24 +7,20 @@
 
 import Foundation
 class ProductListViewModel: ObservableObject {
-    
+    @Published var dataManager: ProductDataManager = ProductDataManager()
     @Published var products: [Product] = []
 
     init(){
-        self.loadData { _ in
+        self.loadData { products in
             
         }
     }
     
-    func loadData(completion: @escaping ([Product]?) -> ()){
-        DataService.shared.requestFetchProducts { products, error in
-            if let products = products{
-                self.products = products
-                completion(products)
-            }else{
-                completion(nil)
-            }
-            
+    func loadData(completion: @escaping ([Product]) -> ()){
+        
+        dataManager.getProducts { products in
+            self.products = products
+//            completion(products)
         }
     }
 }

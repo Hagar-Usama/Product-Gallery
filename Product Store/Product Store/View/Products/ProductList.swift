@@ -15,11 +15,10 @@ struct ProductList: View {
     var gridItemLayout = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
         ScrollView{
-            
             LazyVGrid(columns: gridItemLayout, spacing: 0) {
                 ForEach(viewModel.products) { product in
                     NavigationLink {
-                        ProductDetail(productImageUrl: product.imageURL , productName: product.name)
+                        ProductDetail(productImageUrl: product.imageURL ?? "" , productName: product.name ?? "")
                     } label: {
                         ProductCard(product: product)
                             .padding([.leading, .trailing], 2)
