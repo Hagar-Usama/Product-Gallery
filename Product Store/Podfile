@@ -8,4 +8,6 @@ target 'Product Store' do
   # Pods for Product Store
   pod 'Alamofire', '5.7.1'
   pod 'Kingfisher/SwiftUI'
+  pod 'SwiftLint'
+
 end
