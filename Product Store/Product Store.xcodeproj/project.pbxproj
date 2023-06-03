@@ -20,6 +20,11 @@
 		AE3397D12A298067001C42E0 /* RemoteProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3397D02A298067001C42E0 /* RemoteProductDataManager.swift */; };
 		AE3397D32A298184001C42E0 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3397D22A298184001C42E0 /* Product.swift */; };
 		AE3397D52A299C1C001C42E0 /* LocalProductDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE3397D42A299C1C001C42E0 /* LocalProductDataManager.swift */; };
+		AE43D82F2A2ACECB00184002 /* View+Rotatate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43D82E2A2ACECB00184002 /* View+Rotatate.swift */; };
+		AE43D8312A2ACF1500184002 /* DeviceRotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43D8302A2ACF1500184002 /* DeviceRotation.swift */; };
+		AE43D8342A2AD6FF00184002 /* LandscapeStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43D8332A2AD6FF00184002 /* LandscapeStack.swift */; };
+		AE43D8362A2AD72C00184002 /* PortraitStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43D8352A2AD72C00184002 /* PortraitStack.swift */; };
+		AE43D8382A2AD75300184002 /* OrientationStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE43D8372A2AD75300184002 /* OrientationStack.swift */; };
 		AEA9529A2A27AF2600240852 /* Product_StoreApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA952992A27AF2600240852 /* Product_StoreApp.swift */; };
 		AEA9529C2A27AF2600240852 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA9529B2A27AF2600240852 /* ContentView.swift */; };
 		AEA9529E2A27AF2800240852 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEA9529D2A27AF2800240852 /* Assets.xcassets */; };
@@ -47,6 +52,11 @@
 		AE3397D02A298067001C42E0 /* RemoteProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteProductDataManager.swift; sourceTree = "<group>"; };
 		AE3397D22A298184001C42E0 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		AE3397D42A299C1C001C42E0 /* LocalProductDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalProductDataManager.swift; sourceTree = "<group>"; };
+		AE43D82E2A2ACECB00184002 /* View+Rotatate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Rotatate.swift"; sourceTree = "<group>"; };
+		AE43D8302A2ACF1500184002 /* DeviceRotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceRotation.swift; sourceTree = "<group>"; };
+		AE43D8332A2AD6FF00184002 /* LandscapeStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandscapeStack.swift; sourceTree = "<group>"; };
+		AE43D8352A2AD72C00184002 /* PortraitStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PortraitStack.swift; sourceTree = "<group>"; };
+		AE43D8372A2AD75300184002 /* OrientationStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrientationStack.swift; sourceTree = "<group>"; };
 		AEA952962A27AF2600240852 /* Product Store.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Product Store.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEA952992A27AF2600240852 /* Product_StoreApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product_StoreApp.swift; sourceTree = "<group>"; };
 		AEA9529B2A27AF2600240852 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -95,6 +105,7 @@
 				AE05866A2A284F9800AFEA72 /* Image+Data.swift */,
 				AE076F332A29C9F7008364E0 /* ProductDB+Product.swift */,
 				AE076F352A29CA4C008364E0 /* ProductRemote+Product.swift */,
+				AE43D82E2A2ACECB00184002 /* View+Rotatate.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -102,9 +113,9 @@
 		AE0586722A286E3500AFEA72 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				AE43D8322A2AD6D100184002 /* ProductDetail */,
 				AE05865D2A2802FD00AFEA72 /* ProductList.swift */,
 				AEA952AF2A27B20A00240852 /* ProductCard.swift */,
-				AE05866E2A28572600AFEA72 /* ProductDetail.swift */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -133,6 +144,17 @@
 				AE3397D42A299C1C001C42E0 /* LocalProductDataManager.swift */,
 			);
 			path = LocalData;
+			sourceTree = "<group>";
+		};
+		AE43D8322A2AD6D100184002 /* ProductDetail */ = {
+			isa = PBXGroup;
+			children = (
+				AE05866E2A28572600AFEA72 /* ProductDetail.swift */,
+				AE43D8332A2AD6FF00184002 /* LandscapeStack.swift */,
+				AE43D8352A2AD72C00184002 /* PortraitStack.swift */,
+				AE43D8372A2AD75300184002 /* OrientationStack.swift */,
+			);
+			path = ProductDetail;
 			sourceTree = "<group>";
 		};
 		AEA9528D2A27AF2600240852 = {
@@ -212,6 +234,7 @@
 			children = (
 				AEA952B42A27C33000240852 /* ThemeColor.swift */,
 				AE0586682A28336200AFEA72 /* KingFisherImageView.swift */,
+				AE43D8302A2ACF1500184002 /* DeviceRotation.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -330,9 +353,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE43D82F2A2ACECB00184002 /* View+Rotatate.swift in Sources */,
+				AE43D8312A2ACF1500184002 /* DeviceRotation.swift in Sources */,
 				AE0586602A28066500AFEA72 /* ProductListModelView.swift in Sources */,
+				AE43D8382A2AD75300184002 /* OrientationStack.swift in Sources */,
 				AE0586622A280BD800AFEA72 /* ProductContainerModel.swift in Sources */,
 				AEA952A32A27AF2800240852 /* Persistence.swift in Sources */,
+				AE43D8362A2AD72C00184002 /* PortraitStack.swift in Sources */,
 				AE3397D12A298067001C42E0 /* RemoteProductDataManager.swift in Sources */,
 				AE05865E2A2802FD00AFEA72 /* ProductList.swift in Sources */,
 				AE3397D32A298184001C42E0 /* Product.swift in Sources */,
@@ -346,6 +373,7 @@
 				AE0586692A28336200AFEA72 /* KingFisherImageView.swift in Sources */,
 				AE05866F2A28572600AFEA72 /* ProductDetail.swift in Sources */,
 				AE076F342A29C9F7008364E0 /* ProductDB+Product.swift in Sources */,
+				AE43D8342A2AD6FF00184002 /* LandscapeStack.swift in Sources */,
 				AEA952B52A27C33000240852 /* ThemeColor.swift in Sources */,
 				AEA952B72A27EDED00240852 /* ProductRemote.swift in Sources */,
 				AE076F362A29CA4C008364E0 /* ProductRemote+Product.swift in Sources */,

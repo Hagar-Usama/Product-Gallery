@@ -15,11 +15,7 @@ struct ContentView: View {
         NavigationView {
             ProductList()
         }
-       
     }
-
-
-
 
 }
 

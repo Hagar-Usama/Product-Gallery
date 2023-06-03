@@ -28,8 +28,6 @@ struct ProductCard: View {
                     .scaledToFill()
                     .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
                     .clipped()
-                
-                
             }else{
                 
                 if let data = product.imageData{
