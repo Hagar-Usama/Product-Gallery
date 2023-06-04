@@ -19,11 +19,11 @@ func KingFisherImageView(url:String)-> KFImage{
    
     KFImage(
         URL(string: url)
-//        ,
-//        options: [
-//            KingfisherOptionsInfoItem
-//            .forceRefresh
-//        ]
+        ,
+        options: [
+            KingfisherOptionsInfoItem
+            .forceRefresh
+        ]
     ).onSuccess { result in
         print("sucess")
     }.onFailure { error in

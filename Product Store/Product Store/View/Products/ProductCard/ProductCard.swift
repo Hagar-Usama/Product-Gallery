@@ -22,68 +22,25 @@ struct ProductCard: View {
     var product: Product
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            ZStack{
-                // placeholder image
-                Image("image_placeholder")
-            if let data = product.imageData{
-                    // data image if valid
-                    Image(data: data)?
-                        .resizable()
-                        .scaledToFill()
-                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
-                        .clipped()
-            }else{
-                if let url = product.imageURL {
-                    KingFisherImageView(url: url)
-                        .resizable()
-                        .scaledToFill()
-                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
-                        .clipped()
-                }
-            }
-            }.frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
-//            if let url = product.imageURL {
-//                KingFisherImageView(url: url)
-//                    .resizable()
-//                    .scaledToFill()
-//                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
-//                    .clipped()
-//            }else{
-//                if let data = product.imageData{
-//                    Image(data: data)?
-//                        .resizable()
-//                        .scaledToFill()
-//                        .frame(minWidth: 0, maxWidth: .infinity, maxHeight: 200)
-//                        .clipped()
-//                }else{
-//                    Image(systemName: "star.fill")
-//                }
-//
-//            }
+           CardImage(product: product)
+
             // Stack bottom half of card
             VStack(alignment: .leading, spacing: 6) {
                 HStack(alignment: .top, spacing: 4) {
-                    Text(product.name ?? "")
+                    Text(product.name )
                         .fontWeight(Font.Weight.heavy)
                         .foregroundColor(ThemeColor.primary)
                         .font(.system(size: 12))
                         .multilineTextAlignment(.leading)
                         .lineLimit(2)
-//                        .textCase(.uppercase)
                     Spacer()
-                    // TODO: convert price to double in the right place
-                    Text("$" + String(product.price ?? 0))
+                    Text("$" + String.init(format: "$%.2f", arguments: [Double(product.price ?? 0.00)]))
                         .fontWeight(Font.Weight.heavy)
                         .foregroundColor(ThemeColor.secondary1)
                         .font(.system(size: 12))
                         .multilineTextAlignment(.trailing)
                         .frame(width: 50)
                         .textCase(.uppercase)
-//                        .lineLimit(2)
-                    
-                    
-//Text(String.init(format: "$%.2f", arguments: [Double(product.price)]))
-
                 }
                 
                 Text(product.description ?? "")

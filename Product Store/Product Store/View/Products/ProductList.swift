@@ -29,14 +29,6 @@ struct ProductList: View {
                     
                 }
             }.padding([.leading, .trailing], 8)
-             .refreshable {
-                    print("Refresh")
-                 viewModel.loadData { _ in
-                     
-                 }
-                }
-        }.onAppear{
-//            viewModel.clearDataBase()
         }
         .navigationTitle("Products")
         .foregroundColor(ThemeColor.primary)

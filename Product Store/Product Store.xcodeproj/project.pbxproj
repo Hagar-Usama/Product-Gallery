@@ -35,6 +35,8 @@
 		AEA952B52A27C33000240852 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA952B42A27C33000240852 /* ThemeColor.swift */; };
 		AEA952B72A27EDED00240852 /* ProductRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA952B62A27EDED00240852 /* ProductRemote.swift */; };
 		AEC2E2A52A2D25AB004494D5 /* DataFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2E2A42A2D25AB004494D5 /* DataFlowManager.swift */; };
+		AEC2E2A72A2D2EC9004494D5 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2E2A62A2D2EC9004494D5 /* CircleImage.swift */; };
+		AEC2E2AA2A2D2F40004494D5 /* CardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2E2A92A2D2F40004494D5 /* CardImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +71,8 @@
 		AEA952B42A27C33000240852 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		AEA952B62A27EDED00240852 /* ProductRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemote.swift; sourceTree = "<group>"; };
 		AEC2E2A42A2D25AB004494D5 /* DataFlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowManager.swift; sourceTree = "<group>"; };
+		AEC2E2A62A2D2EC9004494D5 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
+		AEC2E2A92A2D2F40004494D5 /* CardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardImage.swift; sourceTree = "<group>"; };
 		C1EE6864D868E49B308DED0F /* Pods-Product Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product Store.debug.xcconfig"; path = "Target Support Files/Pods-Product Store/Pods-Product Store.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -117,7 +121,7 @@
 			children = (
 				AE43D8322A2AD6D100184002 /* ProductDetail */,
 				AE05865D2A2802FD00AFEA72 /* ProductList.swift */,
-				AEA952AF2A27B20A00240852 /* ProductCard.swift */,
+				AEC2E2A82A2D2F27004494D5 /* ProductCard */,
 			);
 			path = Products;
 			sourceTree = "<group>";
@@ -156,6 +160,7 @@
 				AE43D8332A2AD6FF00184002 /* LandscapeStack.swift */,
 				AE43D8352A2AD72C00184002 /* PortraitStack.swift */,
 				AE43D8372A2AD75300184002 /* OrientationStack.swift */,
+				AEC2E2A62A2D2EC9004494D5 /* CircleImage.swift */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -240,6 +245,15 @@
 				AE43D8302A2ACF1500184002 /* DeviceRotation.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		AEC2E2A82A2D2F27004494D5 /* ProductCard */ = {
+			isa = PBXGroup;
+			children = (
+				AEA952AF2A27B20A00240852 /* ProductCard.swift */,
+				AEC2E2A92A2D2F40004494D5 /* CardImage.swift */,
+			);
+			path = ProductCard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -359,6 +373,7 @@
 				AE43D82F2A2ACECB00184002 /* View+Rotatate.swift in Sources */,
 				AE43D8312A2ACF1500184002 /* DeviceRotation.swift in Sources */,
 				AE0586602A28066500AFEA72 /* ProductListModelView.swift in Sources */,
+				AEC2E2A72A2D2EC9004494D5 /* CircleImage.swift in Sources */,
 				AE43D8382A2AD75300184002 /* OrientationStack.swift in Sources */,
 				AE0586622A280BD800AFEA72 /* ProductContainerModel.swift in Sources */,
 				AEA952A32A27AF2800240852 /* Persistence.swift in Sources */,
@@ -373,6 +388,7 @@
 				AEA952B02A27B20A00240852 /* ProductCard.swift in Sources */,
 				AEA952A62A27AF2800240852 /* Product_Store.xcdatamodeld in Sources */,
 				AE3397D52A299C1C001C42E0 /* LocalProductDataManager.swift in Sources */,
+				AEC2E2AA2A2D2F40004494D5 /* CardImage.swift in Sources */,
 				AE3397CF2A29800D001C42E0 /* ProductDataManager.swift in Sources */,
 				AE0586692A28336200AFEA72 /* KingFisherImageView.swift in Sources */,
 				AE05866F2A28572600AFEA72 /* ProductDetail.swift in Sources */,

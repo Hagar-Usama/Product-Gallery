@@ -19,16 +19,7 @@ struct PortraitStack: View {
                     .font(.system(size: 32))
                     .textCase(.uppercase)
                 Spacer(minLength: 32)
-                KingFisherImageView(url: product.imageURL ?? "")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(minWidth: 0, maxWidth: .infinity, maxHeight: .infinity)
-                    .clipShape(Circle())
-                    .overlay {
-                        Circle().stroke(.white, lineWidth: 4)
-                    }
-                    .shadow(radius: 7)
-                    .padding([.leading, .trailing], 24)
+                CircleImage(product: product)
             }.padding([.top, .bottom, .leading, .trailing], 24)
             Spacer()
         }
