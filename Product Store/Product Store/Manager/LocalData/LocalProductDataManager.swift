@@ -5,9 +5,7 @@
 //  Created by Hagar Usama on 02/06/2023.
 //
 
-import Foundation
 import CoreData
-import UIKit
 
 class LocalProductDataManager {
     
@@ -46,6 +44,7 @@ class LocalProductDataManager {
     func getAllProducts() -> [Product] {
         
         let fetchRequest: NSFetchRequest<ProductDB> = ProductDB.fetchRequest()
+        fetchRequest.sortDescriptors = [NSSortDescriptor(key:#keyPath(ProductDB.name), ascending: true)]
         
         do {
             let productsLocal : [ProductDB] =  try persistentContainer.viewContext.fetch(fetchRequest)
@@ -77,16 +76,15 @@ class LocalProductDataManager {
     
     private func saveProduct(product: Product) {
         
-        let productDB = ProductDB(context: persistentContainer.viewContext)
+        let productDB = ProductDB(context: self.persistentContainer.viewContext)
+        productDB.imageData = product.imageData
         productDB.id = product.id
         productDB.name = product.name
         productDB.price = product.price ?? 0
         productDB.productDescription = product.description ?? ""
-//        productDB.imageData = product.imageData
-        productDB.imageData = UIImage(named: "image_placeholder")?.pngData()
         
         do {
-            try persistentContainer.viewContext.save()
+            try self.persistentContainer.viewContext.save()
         } catch {
             print("Failed to save product \(error)")
         }
@@ -99,6 +97,5 @@ class LocalProductDataManager {
             saveProduct(product: product)
         }
     }
-    
 }
 

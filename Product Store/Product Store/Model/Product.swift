@@ -11,7 +11,7 @@ import Foundation
 // What is parsed in view
 class Product : Identifiable{
     var id: Int32
-    var name: String?
+    var name: String
     var description: String?
     var price: Double?
     var imageURL: String?

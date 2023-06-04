@@ -29,12 +29,6 @@ struct ProductList: View {
                     
                 }
             }.padding([.leading, .trailing], 8)
-             .refreshable {
-                    print("Refresh")
-                 viewModel.loadData { _ in
-                     
-                 }
-                }
         }
         .navigationTitle("Products")
         .foregroundColor(ThemeColor.primary)

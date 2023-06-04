@@ -11,7 +11,7 @@ class ProductListViewModel: ObservableObject {
     @Published var products: [Product] = []
 
     init(){
-        self.loadData { products in
+        self.loadData { _ in
             
         }
     }
