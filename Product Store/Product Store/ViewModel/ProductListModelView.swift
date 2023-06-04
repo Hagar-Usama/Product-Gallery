@@ -12,7 +12,7 @@ class ProductListViewModel: ObservableObject {
 
     init(){
         self.loadData { _ in
-            
+            // intentionally left blank
         }
     }
     

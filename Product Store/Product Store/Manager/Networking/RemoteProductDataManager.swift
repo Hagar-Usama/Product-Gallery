@@ -9,16 +9,13 @@ import Foundation
 import Alamofire
 
 class RemoteProductDataManager{
-    private var ProductsUrl = "http://www.nweave.com/wp-content/uploads/2012/09/featured.txt"
+    private var productsUrl = "http://www.nweave.com/wp-content/uploads/2012/09/featured.txt"
 
-    // MARK: - Services
-//    func getProducts(completion: @escaping ([Product]?, Error?) -> ())
     func getAllProducts(completion: @escaping ([Product]) -> ()) {
-        AF.request(ProductsUrl)
+        AF.request(productsUrl)
             .validate()
             .responseDecodable(of: [ProductContainer].self) { response in
                 guard let products = response.value else {
-                    // TODO: handle errors
                     completion([Product]())
                     return}
                 

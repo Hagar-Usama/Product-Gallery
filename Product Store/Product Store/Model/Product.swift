@@ -12,8 +12,8 @@ import Foundation
 class Product : Identifiable{
     var id: Int32
     var name: String
-    var description: String?
-    var price: Double?
+    var description: String
+    var price: Double
     var imageURL: String?
     var imageData: Data?
     

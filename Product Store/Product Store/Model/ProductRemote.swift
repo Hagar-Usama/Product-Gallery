@@ -8,7 +8,10 @@
 
 
 struct ProductRemote: Codable, Identifiable {
-    let id, name, description, price: String
+    let id: String
+    let name: String
+    let description: String
+    let price: String
     let imageURL: String
 
     enum CodingKeys: String, CodingKey {
