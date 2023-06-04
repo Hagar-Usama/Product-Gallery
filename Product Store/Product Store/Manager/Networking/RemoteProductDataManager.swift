@@ -27,7 +27,7 @@ class RemoteProductDataManager{
                     productsList.append(product.product.toProduct())
                 }
                 
-                completion(productsList)
+                completion(productsList.sorted {$0.name < $1.name})
             }
     }
 }

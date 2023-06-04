@@ -35,6 +35,8 @@ struct ProductList: View {
                      
                  }
                 }
+        }.onAppear{
+//            viewModel.clearDataBase()
         }
         .navigationTitle("Products")
         .foregroundColor(ThemeColor.primary)

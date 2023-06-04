@@ -34,6 +34,7 @@
 		AEA952B02A27B20A00240852 /* ProductCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA952AF2A27B20A00240852 /* ProductCard.swift */; };
 		AEA952B52A27C33000240852 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA952B42A27C33000240852 /* ThemeColor.swift */; };
 		AEA952B72A27EDED00240852 /* ProductRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEA952B62A27EDED00240852 /* ProductRemote.swift */; };
+		AEC2E2A52A2D25AB004494D5 /* DataFlowManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC2E2A42A2D25AB004494D5 /* DataFlowManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		AEA952AF2A27B20A00240852 /* ProductCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCard.swift; sourceTree = "<group>"; };
 		AEA952B42A27C33000240852 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
 		AEA952B62A27EDED00240852 /* ProductRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRemote.swift; sourceTree = "<group>"; };
+		AEC2E2A42A2D25AB004494D5 /* DataFlowManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataFlowManager.swift; sourceTree = "<group>"; };
 		C1EE6864D868E49B308DED0F /* Pods-Product Store.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Product Store.debug.xcconfig"; path = "Target Support Files/Pods-Product Store/Pods-Product Store.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -124,6 +126,7 @@
 			isa = PBXGroup;
 			children = (
 				AE3397CE2A29800D001C42E0 /* ProductDataManager.swift */,
+				AEC2E2A42A2D25AB004494D5 /* DataFlowManager.swift */,
 				AE3397D72A29AB4C001C42E0 /* LocalData */,
 				AE3397D62A29AB3C001C42E0 /* Networking */,
 			);
@@ -365,6 +368,7 @@
 				AE3397D32A298184001C42E0 /* Product.swift in Sources */,
 				AEA9529C2A27AF2600240852 /* ContentView.swift in Sources */,
 				AE05866B2A284F9800AFEA72 /* Image+Data.swift in Sources */,
+				AEC2E2A52A2D25AB004494D5 /* DataFlowManager.swift in Sources */,
 				AEA9529A2A27AF2600240852 /* Product_StoreApp.swift in Sources */,
 				AEA952B02A27B20A00240852 /* ProductCard.swift in Sources */,
 				AEA952A62A27AF2800240852 /* Product_Store.xcdatamodeld in Sources */,

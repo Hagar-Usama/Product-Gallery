@@ -34,5 +34,3 @@ func KingFisherImageView(url:String)-> KFImage{
         Image("not_found").frame(width: 50, height: 50) : Image("image_placeholder").frame(width: 50, height: 50)
     }
 }
-
-
