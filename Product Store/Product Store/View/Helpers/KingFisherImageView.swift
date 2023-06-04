@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-// TODO: move to Utility or helper
 import struct Kingfisher.KFImage
 import Kingfisher
 struct InternetAvailability{

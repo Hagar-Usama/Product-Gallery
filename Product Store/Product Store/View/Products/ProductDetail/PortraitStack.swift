@@ -28,8 +28,10 @@ struct PortraitStack: View {
     
 }
 
-//struct PortraitStack_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PortraitStack()
-//    }
-//}
+struct PortraitStack_Previews: PreviewProvider {
+    static var previews: some View {
+        let product1 = Product(id: 1, name: "Some Title", description: "Some Description", price: 1, imageURL: "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y2F0fGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60", imageData: nil)
+        PortraitStack(product: product1)
+        
+    }
+}
