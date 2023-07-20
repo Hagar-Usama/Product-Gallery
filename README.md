@@ -1,4 +1,4 @@
-# Product-Store
+# Product Gallery
 ![Architecture-MVVM][1] ![UI-SwiftUI][2] ![DB-Core_Data][3] ![DB-Core_Data][4] ![DB-Core_Data][5]
 
 [1]: https://img.shields.io/:Architecture-MVVM-whiteGreen.svg?style=round-square
@@ -9,7 +9,7 @@
 
 ## Introduction
 
-Essentially, Product Store Gallery retrieves a list of products from an API and displays it in a gallery style.
+Essentially, Product Gallery retrieves a list of products from an API and displays it in a gallery style.
 The project works both online (API) and offline (Database). It is designed using the MVVM architectural pattern, SwiftUI, and CoreData.
 
 It is relatively straightforward, but it represents my initial attempt at interacting with **SwiftUI** and **MVVM** in conjunction 👏 🎉🎉.
