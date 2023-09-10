@@ -22,7 +22,7 @@ Despite its simplicity, I value it because I gained knowledge of fundamental con
 
 👉 [Prototype Link](https://www.figma.com/proto/nArFbMRJDFlMdsuQDZ95eC/Products-Viewer?page-id=0%3A1&type=design&node-id=1-88&viewport=661%2C517%2C0.3&t=gMm99ZnwWuZhzdIu-1&scaling=scale-down&starting-point-node-id=1%3A88&mode=design)
 
-## Live View (xcode0
+## Live View (xcode)
 https://github.com/Hagar-Usama/Product-Store/assets/34040335/04496c2b-941c-4e76-9dc2-f37cd4263eea
 
 
